@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Gruppo", cursive;
+}
+
+.container {
+    text-align: center;
+    background-color: #2ec194;
+    position: relative;
+    z-index: -100;
+}
+.box-shadow {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5rem;
+    transition: all 0.5s;
+}
+.box {
+    width: 20rem;
+    height: 20rem;
+    margin: 3rem;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-1 {
+    box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
+}
+.box-2,.box-3,.box-4 {
+    position: relative;
+}
+.box-2::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    width: 90%;
+    height: 5rem;
+    left: 10%;
+    bottom: 1rem;
+    transform-origin: left;
+    transform: skewY(8deg);
+    z-index: -1;
+    filter: blur(5px);
+}
+.box-3::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    width: 50%;
+    height: 3rem;
+    left: 0;
+    bottom: 0rem;
+    transform-origin: right;
+    transform: skewY(-8deg);
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.box-4::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    width: 50%;
+    height: 5rem;
+    right: 0;
+    bottom: 0;
+    transform-origin: left;
+    transform: skewY(8deg);
+    z-index: -1;
+    filter: blur(5px);
+}
+.box-4::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    width: 50%;
+    height: 5rem;
+    left: 0;
+    bottom: 0rem;
+    transform-origin: right;
+    transform: skewY(-8deg);
+    z-index: -1;
+    filter: blur(5px);
+}
+.box-5{
+    background-color: #2ec194;
+    border-radius: 1.2rem;
+    box-shadow: -1rem -1rem 1rem rgba(255, 255, 255, 0.2),
+                1rem 1rem 1rem rgba(0, 0, 0, 0.1);
+}
+.box-6{
+    background-color: #2ec194;
+    border-radius: 1.2rem;
+    box-shadow: -1rem -1rem 1rem rgba(255, 255, 255, 0.2),
+                1rem 1rem 1rem rgba(0, 0, 0, 0.1),
+                inset -0.5rem -0.5rem 0.5rem rgba(255, 255, 255, 0.2),
+                inset 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
